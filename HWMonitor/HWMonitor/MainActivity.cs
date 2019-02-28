@@ -14,6 +14,8 @@ namespace HWMonitor
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            // https://blog.xamarin.com/exploring-androids-bottom-navigation-view/
+
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
