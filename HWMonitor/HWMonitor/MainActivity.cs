@@ -32,7 +32,7 @@ namespace HWMonitor
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
 
             // Load the first fragment on creation
-            LoadFragment(Resource.Id.menu_home);
+            LoadFragment(Resource.Id.menu_device);
         }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -58,13 +58,13 @@ namespace HWMonitor
             Android.Support.V4.App.Fragment fragment = null;
             switch (id)
             {
-                case Resource.Id.menu_home:
+                case Resource.Id.menu_device:
                     fragment = Fragment1.NewInstance();
                     break;
-                case Resource.Id.menu_audio:
+                case Resource.Id.menu_battery:
                     fragment = Fragment2.NewInstance();
                     break;
-                case Resource.Id.menu_video:
+                case Resource.Id.menu_cpu:
                     fragment = Fragment3.NewInstance();
                     break;
             }

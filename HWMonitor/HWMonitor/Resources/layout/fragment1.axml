@@ -9,5 +9,5 @@
 		android:layout_height="match_parent"
 		android:id="@+id/textView1"
 		android:gravity="center"
-		android:text="Fragment1" />
+		android:text="Device" />
 </LinearLayout>
