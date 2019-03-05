@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.Views;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Xamarin.Essentials;
+using System;
 
 namespace HWMonitor
 {
@@ -32,6 +33,7 @@ namespace HWMonitor
             ///
             /// THIS SECTION IS FOR DEBUG
             ///
+            //Check GetHardwareInfo.cs for all properties.
             HWInfo = new GetHardwareInfo();
             
             //Device info
@@ -44,6 +46,15 @@ namespace HWMonitor
             var text3 = HWInfo.BatterySource;
             var text4 = HWInfo.BatteryState;
 
+            //Display info
+            HWInfo.GetDisplayInfo();
+            var text5 = HWInfo.DisplayInfo;
+            var text6 = HWInfo.DisplayOrientation;
+            //You can also call 2 parameters for every property of DisplayInfo
+            //We need to decide if we are going to use DisplayInfo for each parameter
+            //Or if we are going to use separately set parameters
+            var text7 = HWInfo.DisplayInfo.Orientation;
+
             ///
             /// END OF DEBUG SECTION
             ///
@@ -51,6 +62,13 @@ namespace HWMonitor
 
             //Called when BatteryInfo is changed
             Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
+            //Called when screen metrics are changed
+            DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
+        }
+
+        public void OnMainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
+        {
+            HWInfo.GetDisplayInfo();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

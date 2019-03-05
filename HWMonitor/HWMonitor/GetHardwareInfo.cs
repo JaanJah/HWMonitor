@@ -104,7 +104,37 @@ namespace HWMonitor
                     // Unable to detect power source
                     break;
             }
+        }
 
+        /// <summary>
+        /// Display info
+        /// </summary>
+        public DisplayInfo DisplayInfo { get; set; }
+        public DisplayOrientation DisplayOrientation { get; set; }
+        public DisplayRotation DisplayRotation { get; set; }
+        public double DisplayWidth { get; set; }
+        public double DisplayHeight { get; set; }
+        public double DisplayDensity { get; set; }
+  
+        public void GetDisplayInfo()
+        {
+            // Get Metrics
+            DisplayInfo = DeviceDisplay.MainDisplayInfo;
+
+            // Orientation (Landscape, Portrait, Square, Unknown)
+            DisplayOrientation = DisplayInfo.Orientation;
+
+            // Rotation (0, 90, 180, 270)
+            DisplayRotation = DisplayInfo.Rotation;
+
+            // Width (in pixels)
+            DisplayWidth = DisplayInfo.Width;
+
+            // Height (in pixels)
+            DisplayHeight = DisplayInfo.Height;
+
+            // Screen density
+            DisplayDensity = DisplayInfo.Density;
         }
 
     }
