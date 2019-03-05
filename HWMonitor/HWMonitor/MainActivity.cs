@@ -14,20 +14,6 @@ namespace HWMonitor
     [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        //protected override void OnCreate(Bundle savedInstanceState)
-        //{
-        //    // https://blog.xamarin.com/exploring-androids-bottom-navigation-view/
-
-        //    base.OnCreate(savedInstanceState);
-        //    // Set our view from the "main" layout resource
-        //    SetContentView(Resource.Layout.activity_main);
-        //    var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-
-        //    SetSupportActionBar(toolbar);
-        //    SupportActionBar.Title = "Hardware monitor";
-        //    //ActionBar.SetHomeAsUpIndicator(Resource.Drawable.settingsBtn);
-        //}
-
         BottomNavigationView bottomNavigation;
         protected override void OnCreate(Bundle bundle)
         {

@@ -18,7 +18,9 @@
       android:layout_height="56dp"
       android:layout_gravity="start"
       android:layout_alignParentBottom="true"
-      android:background="@android:color/white"
       app:elevation="16dp"
-      app:menu="@menu/bottom_navigation_main" />
+      app:menu="@menu/bottom_navigation_main"
+	  android:background="@color/colorPrimaryDark"
+	  app:itemIconTint="@drawable/nav_item_colors"
+	  app:itemTextColor="@drawable/nav_item_colors"/>
 </RelativeLayout>
