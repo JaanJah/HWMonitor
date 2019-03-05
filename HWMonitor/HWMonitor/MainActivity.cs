@@ -13,6 +13,8 @@ namespace HWMonitor
     [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        public GetHardwareInfo HWInfo { get; set; }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,11 +29,28 @@ namespace HWMonitor
             //Initialize Xamarin Essentials
             Platform.Init(this, savedInstanceState);
 
-            //For debug
-            var hwInfo = new GetHardwareInfo();
-            hwInfo.GetDeviceInfo();
-            var text = hwInfo.DeviceModel;
-            var a = 0;
+            ///
+            /// THIS SECTION IS FOR DEBUG
+            ///
+            HWInfo = new GetHardwareInfo();
+            
+            //Device info
+            HWInfo.GetDeviceInfo();
+            var text = HWInfo.DeviceModel;
+
+            //Battery info
+            HWInfo.GetBatteryInfo();
+            var text2 = HWInfo.BatteryChargeLevel;
+            var text3 = HWInfo.BatterySource;
+            var text4 = HWInfo.BatteryState;
+
+            ///
+            /// END OF DEBUG SECTION
+            ///
+
+
+            //Called when BatteryInfo is changed
+            Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -45,6 +64,11 @@ namespace HWMonitor
             Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
                 ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
+        }
+
+        public void Battery_BatteryInfoChanged(object sender, BatteryInfoChangedEventArgs e)
+        {
+            HWInfo.GetBatteryInfo();
         }
 
         //Ask for permission to allow Xamarin Essentials

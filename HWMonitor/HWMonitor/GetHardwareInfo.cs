@@ -17,6 +17,9 @@ namespace HWMonitor
 {
     public class GetHardwareInfo
     {
+        /// <summary>
+        /// Device Info
+        /// </summary>
         public string DeviceModel { get; set; }
         public string DeviceManufacturer { get; set; }
         public string DeviceName { get; set; }
@@ -48,5 +51,61 @@ namespace HWMonitor
             // Device Type
             DeviceType = DeviceInfo.DeviceType;
         }
+
+        /// <summary>
+        /// Battery info
+        /// </summary>
+        public double BatteryChargeLevel { get; set; }
+        public BatteryState BatteryState { get; set; }
+        public BatteryPowerSource BatterySource { get; set; }
+
+        public void GetBatteryInfo()
+        {
+            BatteryChargeLevel = Battery.ChargeLevel; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
+
+            BatteryState = Battery.State;
+
+            switch (BatteryState)
+            {
+                case BatteryState.Charging:
+                    // Currently charging
+                    break;
+                case BatteryState.Full:
+                    // Battery is full
+                    break;
+                case BatteryState.Discharging:
+                case BatteryState.NotCharging:
+                    // Currently discharging battery or not being charged
+                    break;
+                case BatteryState.NotPresent:
+                // Battery doesn't exist in device (desktop computer)
+                case BatteryState.Unknown:
+                    // Unable to detect battery state
+                    break;
+            }
+
+            BatterySource = Battery.PowerSource;
+
+            switch (BatterySource)
+            {
+                case BatteryPowerSource.Battery:
+                    // Being powered by the battery
+                    break;
+                case BatteryPowerSource.AC:
+                    // Being powered by A/C unit
+                    break;
+                case BatteryPowerSource.Usb:
+                    // Being powered by USB cable
+                    break;
+                case BatteryPowerSource.Wireless:
+                    // Powered via wireless charging
+                    break;
+                case BatteryPowerSource.Unknown:
+                    // Unable to detect power source
+                    break;
+            }
+
+        }
+
     }
 }
