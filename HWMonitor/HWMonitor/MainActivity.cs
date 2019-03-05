@@ -24,7 +24,7 @@ namespace HWMonitor
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
 
             SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Hardware monitor";
+            SupportActionBar.Title = "Hardware Monitor";
             //ActionBar.SetHomeAsUpIndicator(Resource.Drawable.settingsBtn);
 
             //Initialize Xamarin Essentials
@@ -42,6 +42,7 @@ namespace HWMonitor
 
             //Battery info
             HWInfo.GetBatteryInfo();
+            //They should be global variables because otherwise they wont update
             var text2 = HWInfo.BatteryChargeLevel;
             var text3 = HWInfo.BatterySource;
             var text4 = HWInfo.BatteryState;
@@ -55,10 +56,13 @@ namespace HWMonitor
             //Or if we are going to use separately set parameters
             var text7 = HWInfo.DisplayInfo.Orientation;
 
+            ActivityManager.MemoryInfo mem = new ActivityManager.MemoryInfo();
+            var tex2t = mem.AvailMem;
+            var tx3t = mem.TotalMem;
+            var lowmem = mem.LowMemory;
             ///
             /// END OF DEBUG SECTION
             ///
-
 
             //Called when BatteryInfo is changed
             Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
