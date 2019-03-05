@@ -21,5 +21,4 @@
       android:icon="@mipmap/ic_action_videocam"
       android:title="Test2"
       app:showAsAction="ifRoom" />
-
 </menu>

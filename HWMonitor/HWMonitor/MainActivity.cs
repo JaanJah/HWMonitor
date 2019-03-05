@@ -6,24 +6,52 @@ using Android.Runtime;
 using Android.Widget;
 using Android.Views;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.Design.Widget;
+using HWMonitor.Fragments;
 
 namespace HWMonitor
 {
     [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        //protected override void OnCreate(Bundle savedInstanceState)
+        //{
+        //    // https://blog.xamarin.com/exploring-androids-bottom-navigation-view/
+
+        //    base.OnCreate(savedInstanceState);
+        //    // Set our view from the "main" layout resource
+        //    SetContentView(Resource.Layout.activity_main);
+        //    var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+
+        //    SetSupportActionBar(toolbar);
+        //    SupportActionBar.Title = "Hardware monitor";
+        //    //ActionBar.SetHomeAsUpIndicator(Resource.Drawable.settingsBtn);
+        //}
+
+        BottomNavigationView bottomNavigation;
+        protected override void OnCreate(Bundle bundle)
         {
-            // https://blog.xamarin.com/exploring-androids-bottom-navigation-view/
-
-            base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
+            base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_main);
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            if (toolbar != null)
+            {
+                SetSupportActionBar(toolbar);
+                SupportActionBar.SetDisplayHomeAsUpEnabled(false);
+                SupportActionBar.SetHomeButtonEnabled(false);
+            }
 
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Hardware monitor";
-            //ActionBar.SetHomeAsUpIndicator(Resource.Drawable.settingsBtn);
+            bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
+
+            bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
+
+            // Load the first fragment on creation
+            LoadFragment(Resource.Id.menu_home);
+        }
+
+        private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
+        {
+            LoadFragment(e.Item.ItemId);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -37,6 +65,30 @@ namespace HWMonitor
             Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
                 ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
+        }
+
+        void LoadFragment(int id)
+        {
+            Android.Support.V4.App.Fragment fragment = null;
+            switch (id)
+            {
+                case Resource.Id.menu_home:
+                    fragment = Fragment1.NewInstance();
+                    break;
+                case Resource.Id.menu_audio:
+                    fragment = Fragment2.NewInstance();
+                    break;
+                case Resource.Id.menu_video:
+                    fragment = Fragment3.NewInstance();
+                    break;
+            }
+
+            if (fragment == null)
+                return;
+
+            SupportFragmentManager.BeginTransaction()
+                .Replace(Resource.Id.content_frame, fragment)
+                .Commit();
         }
     }
 }
