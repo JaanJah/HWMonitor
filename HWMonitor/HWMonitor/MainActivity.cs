@@ -8,6 +8,7 @@ using Android.Views;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Xamarin.Essentials;
 using System;
+using Android.Hardware;
 
 namespace HWMonitor
 {
@@ -61,6 +62,12 @@ namespace HWMonitor
             var tex2t = mem.AvailMem;
             var tx3t = mem.TotalMem;
             var lowmem = mem.LowMemory;
+
+            //https://developer.android.com/reference/android/hardware/Sensor.html#TYPE_AMBIENT_TEMPERATURE
+            var ab = SensorAdditionalInfoType.InternalTemperature;
+            var aaaa = Sensor.StringTypeAmbientTemperature;
+
+            var asdf = aaaa;
             ///
             /// END OF DEBUG SECTION
             ///
