@@ -52,6 +52,7 @@ namespace HWMonitor
             var text5 = HWInfo.DisplayInfo;
             var text6 = HWInfo.DisplayOrientation;
             //You can also call 2 parameters for every property of DisplayInfo
+            //Lmao the TPT Timetable is the best app XD
             //We need to decide if we are going to use DisplayInfo for each parameter
             //Or if we are going to use separately set parameters
             var text7 = HWInfo.DisplayInfo.Orientation;
