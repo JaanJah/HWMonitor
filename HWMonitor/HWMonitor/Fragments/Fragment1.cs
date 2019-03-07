@@ -10,16 +10,17 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-
 namespace HWMonitor.Fragments
 {
     public class Fragment1 : Android.Support.V4.App.Fragment
     {
+        public GetHardwareInfo HWInfo { get; set; }
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            HWInfo = new GetHardwareInfo();
 
-            // Create your fragment here
         }
 
         public static Fragment1 NewInstance()
