@@ -64,7 +64,7 @@ namespace HWMonitor
                 case Resource.Id.menu_battery:
                     fragment = Fragment2.NewInstance();
                     break;
-                case Resource.Id.menu_cpu:
+                case Resource.Id.menu_display:
                     fragment = Fragment3.NewInstance();
                     break;
             }

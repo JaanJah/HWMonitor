@@ -20,6 +20,7 @@ namespace HWMonitor.Fragments
         {
             base.OnCreate(savedInstanceState);
             HWInfo = new GetHardwareInfo();
+            HWInfo.GetDeviceInfo();
 
         }
 
@@ -32,8 +33,15 @@ namespace HWMonitor.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.fragment1, null);
+            var view = inflater.Inflate(Resource.Layout.fragment1, null);
+            view.FindViewById<TextView>(Resource.Id.deviceModel).Text = HWInfo.DeviceModel;
+            view.FindViewById<TextView>(Resource.Id.deviceManufacturer).Text = HWInfo.DeviceManufacturer;
+            view.FindViewById<TextView>(Resource.Id.deviceName).Text = HWInfo.DeviceName;
+            view.FindViewById<TextView>(Resource.Id.deviceVersion).Text = HWInfo.DeviceVersion;
+            view.FindViewById<TextView>(Resource.Id.devicePlatform).Text = HWInfo.DevicePlatform.ToString();
+            view.FindViewById<TextView>(Resource.Id.deviceIdiom).Text = HWInfo.DeviceIdiom.ToString();
+            view.FindViewById<TextView>(Resource.Id.deviceType).Text = HWInfo.DeviceType.ToString();
+            return view;
         }
     }
 }

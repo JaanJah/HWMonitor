@@ -189,7 +189,7 @@
     <AndroidResource Include="Resources\drawable\batteryBtn.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cpuBtn.png" />
+    <AndroidResource Include="Resources\drawable\displayBtn.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\deviceBtn.png" />
