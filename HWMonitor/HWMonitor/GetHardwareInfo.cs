@@ -109,7 +109,7 @@ namespace HWMonitor
         /// <summary>
         /// Display info
         /// </summary>
-        public DisplayInfo DisplayInfo { get; set; }
+        private DisplayInfo DisplayInfo { get; set; }
         public DisplayOrientation DisplayOrientation { get; set; }
         public DisplayRotation DisplayRotation { get; set; }
         public double DisplayWidth { get; set; }
