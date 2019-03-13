@@ -15,11 +15,13 @@ namespace HWMonitor.Fragments
 {
     public class Fragment2 : Android.Support.V4.App.Fragment
     {
+        public GetHardwareInfo HWInfo { get; set; }
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
+            HWInfo = new GetHardwareInfo();
+            HWInfo.GetBatteryInfo();
         }
 
         public static Fragment2 NewInstance()
@@ -31,8 +33,11 @@ namespace HWMonitor.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.fragment2, null);
+            var view = inflater.Inflate(Resource.Layout.fragment2, null);
+            view.FindViewById<TextView>(Resource.Id.batteryChargeLevel).Text = HWInfo.BatteryChargeLevel.ToString();
+            view.FindViewById<TextView>(Resource.Id.batteryState).Text = HWInfo.BatteryState.ToString();
+            view.FindViewById<TextView>(Resource.Id.batterySource).Text = HWInfo.BatterySource.ToString();
+            return view;
         }
     }
 }
