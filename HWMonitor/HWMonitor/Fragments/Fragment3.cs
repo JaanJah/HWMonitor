@@ -15,11 +15,13 @@ namespace HWMonitor.Fragments
 {
     public class Fragment3 : Android.Support.V4.App.Fragment
     {
+        public GetHardwareInfo HWInfo { get; set; }
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
+            HWInfo = new GetHardwareInfo();
+            HWInfo.GetDisplayInfo();
         }
 
         public static Fragment3 NewInstance()
@@ -31,8 +33,13 @@ namespace HWMonitor.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.fragment3, null);
+            var view = inflater.Inflate(Resource.Layout.fragment3, null);
+            view.FindViewById<TextView>(Resource.Id.displayOrientation).Text = HWInfo.DisplayOrientation.ToString();
+            view.FindViewById<TextView>(Resource.Id.displayRotation).Text = HWInfo.DisplayRotation.ToString();
+            view.FindViewById<TextView>(Resource.Id.displayWidth).Text = HWInfo.DisplayWidth.ToString();
+            view.FindViewById<TextView>(Resource.Id.displayHeight).Text = HWInfo.DisplayHeight.ToString();
+            view.FindViewById<TextView>(Resource.Id.displayDensity).Text = HWInfo.DisplayDensity.ToString();
+            return view;
         }
     }
 }
