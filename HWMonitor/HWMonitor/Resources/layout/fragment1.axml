@@ -1,83 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+	android:background="#444444"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:text="Device model" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/deviceModel"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Device Manufacturer" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/deviceManufacturer"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Device Name" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/deviceName"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Device Version" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/deviceVersion"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Device Platform" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/devicePlatform"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Device Idiom" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/deviceIdiom"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Device Type" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/deviceType"
 		android:text="" />
 </LinearLayout>

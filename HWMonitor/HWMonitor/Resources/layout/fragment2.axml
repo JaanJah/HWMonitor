@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+	android:background="#444444"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
+		android:textColor="#EFEFEF"
 		android:layout_height="wrap_content"
 		android:text="Battery charge level" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
+		android:textColor="#EFEFEF"
 		android:layout_height="wrap_content"
 		android:id="@+id/batteryChargeLevel"
 		android:text="" />
@@ -18,22 +21,28 @@
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Battery state" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/batteryState"
 		android:text="" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
+		android:layout_marginTop="10dip"
 		android:text="Battery source" />
 	<TextView
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:textColor="#EFEFEF"
 		android:id="@+id/batterySource"
 		android:text="" />
 </LinearLayout>
