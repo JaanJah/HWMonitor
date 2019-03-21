@@ -8,6 +8,9 @@ using Android.Views;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
 using HWMonitor.Fragments;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace HWMonitor
 {
@@ -18,6 +21,7 @@ namespace HWMonitor
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            AppCenter.Start("f7ae5016-aa19-4264-8a45-7817bcf7d0e6", typeof(Analytics), typeof(Crashes));
             SetContentView(Resource.Layout.activity_main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
