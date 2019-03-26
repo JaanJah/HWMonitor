@@ -61,7 +61,7 @@ namespace HWMonitor
 
         public void GetBatteryInfo()
         {
-            BatteryChargeLevel = Battery.ChargeLevel; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
+            BatteryChargeLevel = Battery.ChargeLevel*100; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
 
             BatteryState = Battery.State;
 

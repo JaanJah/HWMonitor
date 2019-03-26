@@ -1,78 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
 	android:background="#444444"
-	android:paddingLeft="15dip"
-	android:paddingTop="10dip"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:text="Display orientation" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:id="@+id/displayOrientation"
-		android:text="" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:layout_marginTop="15dip"
-		android:text="Display rotation" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:id="@+id/displayRotation"
-		android:text="" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:layout_marginTop="15dip"
-		android:text="Display width" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:id="@+id/displayWidth"
-		android:text="" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:layout_marginTop="15dip"
-		android:text="Display height" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/displayHeight"
-		android:textColor="#EFEFEF"
-		android:text="" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="15dip"
-		android:textColor="#EFEFEF"
-		android:text="Display density" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:id="@+id/displayDensity"
-		android:text="" />
-</LinearLayout>
+	android:id="@+id/scrollView1" >
+	<LinearLayout
+		android:orientation="vertical"
+		android:paddingLeft="15dip"
+		android:paddingTop="10dip"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:text="Display orientation" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:id="@+id/displayOrientation"
+			android:text="" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:layout_marginTop="15dip"
+			android:text="Display rotation" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:id="@+id/displayRotation"
+			android:text="" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:layout_marginTop="15dip"
+			android:text="Display width" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:id="@+id/displayWidth"
+			android:text="" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:layout_marginTop="15dip"
+			android:text="Display height" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/displayHeight"
+			android:textColor="#EFEFEF"
+			android:text="" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dip"
+			android:textColor="#EFEFEF"
+			android:text="Display density" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:id="@+id/displayDensity"
+			android:text="" />
+	</LinearLayout>
+</ScrollView>

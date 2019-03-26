@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
 	android:background="#444444"
-	android:paddingLeft="15dip"
-	android:paddingTop="10dip"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:textColor="#EFEFEF"
-		android:layout_height="wrap_content"
-		android:text="Battery charge level" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:textColor="#EFEFEF"
-		android:layout_height="wrap_content"
-		android:id="@+id/batteryChargeLevel"
-		android:text="" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:layout_marginTop="15dip"
-		android:text="Battery state" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:id="@+id/batteryState"
-		android:text="" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:layout_marginTop="15dip"
-		android:text="Battery source" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#EFEFEF"
-		android:id="@+id/batterySource"
-		android:text="" />
-</LinearLayout>
+	android:id="@+id/scrollView1" >
+	<LinearLayout
+		android:orientation="vertical"
+		android:paddingLeft="15dip"
+		android:paddingTop="10dip"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:textColor="#EFEFEF"
+			android:layout_height="wrap_content"
+			android:text="Battery charge level" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:textColor="#EFEFEF"
+			android:layout_height="wrap_content"
+			android:id="@+id/batteryChargeLevel"
+			android:text="" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:layout_marginTop="15dip"
+			android:text="Battery state" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:id="@+id/batteryState"
+			android:text="" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:layout_marginTop="15dip"
+			android:text="Battery source" />
+		<TextView
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#EFEFEF"
+			android:id="@+id/batterySource"
+			android:text="" />
+	</LinearLayout>
+</ScrollView>

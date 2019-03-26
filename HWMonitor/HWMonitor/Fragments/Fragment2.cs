@@ -34,7 +34,7 @@ namespace HWMonitor.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.fragment2, null);
-            view.FindViewById<TextView>(Resource.Id.batteryChargeLevel).Text = HWInfo.BatteryChargeLevel.ToString();
+            view.FindViewById<TextView>(Resource.Id.batteryChargeLevel).Text = HWInfo.BatteryChargeLevel.ToString() + "%";
             view.FindViewById<TextView>(Resource.Id.batteryState).Text = HWInfo.BatteryState.ToString();
             view.FindViewById<TextView>(Resource.Id.batterySource).Text = HWInfo.BatterySource.ToString();
             return view;
