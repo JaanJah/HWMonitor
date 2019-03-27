@@ -49,8 +49,9 @@ namespace HWMonitor.Fragments
 
         private void SetDisplayInfo(View view)
         {
+            var rotation = HWInfo.DisplayRotation.ToString().Remove(0, 8) + "°";
             view.FindViewById<TextView>(Resource.Id.displayOrientation).Text = HWInfo.DisplayOrientation.ToString();
-            view.FindViewById<TextView>(Resource.Id.displayRotation).Text = HWInfo.DisplayRotation.ToString();
+            view.FindViewById<TextView>(Resource.Id.displayRotation).Text = rotation;
             view.FindViewById<TextView>(Resource.Id.displayWidth).Text = HWInfo.DisplayWidth.ToString();
             view.FindViewById<TextView>(Resource.Id.displayHeight).Text = HWInfo.DisplayHeight.ToString();
             view.FindViewById<TextView>(Resource.Id.displayDensity).Text = HWInfo.DisplayDensity.ToString();
