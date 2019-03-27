@@ -11,6 +11,7 @@ using HWMonitor.Fragments;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Xamarin.Essentials;
 
 namespace HWMonitor
 {
@@ -18,11 +19,13 @@ namespace HWMonitor
     public class MainActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
+        GetHardwareInfo HWInfo;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             AppCenter.Start("f7ae5016-aa19-4264-8a45-7817bcf7d0e6", typeof(Analytics), typeof(Crashes));
             SetContentView(Resource.Layout.activity_main);
+            HWInfo = new GetHardwareInfo();
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
@@ -31,9 +34,17 @@ namespace HWMonitor
                 SupportActionBar.SetHomeButtonEnabled(false);
             }
 
+            //Initialize Xamarin Essentials
+            Platform.Init(this, bundle);
+
             bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
 
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
+
+            ////Called when BatteryInfo is changed
+            //Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
+            ////Called when screen metrics are changed
+            //DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
 
             // Load the first fragment on creation
             LoadFragment(Resource.Id.menu_device);
@@ -56,6 +67,17 @@ namespace HWMonitor
                 ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
         }
+
+
+        //public void OnMainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
+        //{
+        //    HWInfo.GetDisplayInfo();
+        //}
+
+        //public void Battery_BatteryInfoChanged(object sender, BatteryInfoChangedEventArgs e)
+        //{
+        //    HWInfo.GetBatteryInfo();
+        //}
 
         void LoadFragment(int id)
         {

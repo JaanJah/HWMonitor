@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Xamarin.Essentials;
 
 namespace HWMonitor.Fragments
 {
@@ -22,6 +23,9 @@ namespace HWMonitor.Fragments
             base.OnCreate(savedInstanceState);
             HWInfo = new GetHardwareInfo();
             HWInfo.GetBatteryInfo();
+
+            //Called when BatteryInfo is changed
+            Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
         }
 
         public static Fragment2 NewInstance()
@@ -30,14 +34,25 @@ namespace HWMonitor.Fragments
             return frag2;
         }
 
-
+        private View view;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var view = inflater.Inflate(Resource.Layout.fragment2, null);
+            view = inflater.Inflate(Resource.Layout.fragment2, null);
+            SetBatteryInfo(view);
+            return view;
+        }
+
+        public void Battery_BatteryInfoChanged(object sender, BatteryInfoChangedEventArgs e)
+        {
+            HWInfo.GetBatteryInfo();
+            SetBatteryInfo(view);
+        }
+
+        private void SetBatteryInfo(View view)
+        {
             view.FindViewById<TextView>(Resource.Id.batteryChargeLevel).Text = HWInfo.BatteryChargeLevel.ToString() + "%";
             view.FindViewById<TextView>(Resource.Id.batteryState).Text = HWInfo.BatteryState.ToString();
             view.FindViewById<TextView>(Resource.Id.batterySource).Text = HWInfo.BatterySource.ToString();
-            return view;
         }
     }
 }

@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Xamarin.Essentials;
 
 namespace HWMonitor.Fragments
 {
@@ -22,6 +23,8 @@ namespace HWMonitor.Fragments
             base.OnCreate(savedInstanceState);
             HWInfo = new GetHardwareInfo();
             HWInfo.GetDisplayInfo();
+            //Called when screen metrics are changed
+            DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
         }
 
         public static Fragment3 NewInstance()
@@ -30,16 +33,27 @@ namespace HWMonitor.Fragments
             return frag3;
         }
 
-
+        private View view;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var view = inflater.Inflate(Resource.Layout.fragment3, null);
+            view = inflater.Inflate(Resource.Layout.fragment3, null);
+            SetDisplayInfo(view);
+            return view;
+        }
+
+        public void OnMainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
+        {
+            HWInfo.GetDisplayInfo();
+            SetDisplayInfo(view);
+        }
+
+        private void SetDisplayInfo(View view)
+        {
             view.FindViewById<TextView>(Resource.Id.displayOrientation).Text = HWInfo.DisplayOrientation.ToString();
             view.FindViewById<TextView>(Resource.Id.displayRotation).Text = HWInfo.DisplayRotation.ToString();
             view.FindViewById<TextView>(Resource.Id.displayWidth).Text = HWInfo.DisplayWidth.ToString();
             view.FindViewById<TextView>(Resource.Id.displayHeight).Text = HWInfo.DisplayHeight.ToString();
             view.FindViewById<TextView>(Resource.Id.displayDensity).Text = HWInfo.DisplayDensity.ToString();
-            return view;
         }
     }
 }
