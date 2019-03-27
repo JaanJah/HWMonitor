@@ -40,12 +40,14 @@ namespace HWMonitor
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
 
             // Load the first fragment on creation
-            LoadFragment(Resource.Id.menu_device);
+            LoadFragment(InstanceConfiguration.LastSelectedTab);
         }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {
-            LoadFragment(e.Item.ItemId);
+            var selectedTab = e.Item.ItemId;
+            InstanceConfiguration.LastSelectedTab = selectedTab;
+            LoadFragment(selectedTab);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
