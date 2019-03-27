@@ -14,11 +14,6 @@ namespace HWMonitor
 {
     public static class InstanceConfiguration
     {
-        private static int lastSelectedTab = Resource.Id.menu_device;
-        public static int LastSelectedTab
-        {
-            get { return lastSelectedTab; }
-            set { lastSelectedTab = value; }
-        }
+        public static int LastSelectedTab { get; set; } = Resource.Id.menu_device;
     }
 }
