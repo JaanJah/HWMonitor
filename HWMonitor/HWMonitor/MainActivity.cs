@@ -12,6 +12,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Essentials;
+using Android.Content;
 
 namespace HWMonitor
 {
@@ -58,8 +59,15 @@ namespace HWMonitor
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
+            switch (item.ItemId)
+            {
+                case Resource.Id.menu_settings:
+                    var settingsActivity = new Intent(this, typeof(SettingsActivity));
+                    StartActivity(settingsActivity);
+                    break;
+                default:
+                    break;
+            }
             return base.OnOptionsItemSelected(item);
         }
 
