@@ -12,6 +12,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Essentials;
+using Microsoft.AppCenter.Push;
 
 namespace HWMonitor
 {
@@ -22,7 +23,7 @@ namespace HWMonitor
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            AppCenter.Start("f7ae5016-aa19-4264-8a45-7817bcf7d0e6", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("f7ae5016-aa19-4264-8a45-7817bcf7d0e6", typeof(Analytics), typeof(Crashes), typeof(Push));
             SetContentView(Resource.Layout.activity_main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
