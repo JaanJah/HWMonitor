@@ -32,7 +32,7 @@
   <!--SEE: https://github.com/xamarin/monodroid-samples/tree/master/android5.0/ThemeSwitcher/ThemeSwitcher -->
 
     <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
-      <item name="android:windowBackground">@drawable/settingsBtn</item>
+      <item name="android:windowBackground">@drawable/splash_screen2</item>
       <item name="android:windowNoTitle">true</item>
       <item name="android:windowFullscreen">true</item>
     </style>
