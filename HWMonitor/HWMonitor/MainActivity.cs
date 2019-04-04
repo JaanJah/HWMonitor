@@ -9,7 +9,6 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Xamarin.Essentials;
-using Microsoft.AppCenter.Push;
 using Android.Content;
 using Microsoft.AppCenter.Distribute;
 
