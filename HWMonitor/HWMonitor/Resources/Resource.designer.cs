@@ -4942,6 +4942,9 @@ namespace HWMonitor
 			// aapt resource value: 0x7f0d0191
 			public const int MyTheme_Base = 2131558801;
 			
+			// aapt resource value: 0x7f0d0194
+			public const int MyTheme_Splash = 2131558804;
+			
 			// aapt resource value: 0x7f0d002d
 			public const int Platform_AppCompat = 2131558445;
 			

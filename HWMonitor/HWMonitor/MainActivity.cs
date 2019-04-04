@@ -14,7 +14,7 @@ using Android.Content;
 
 namespace HWMonitor
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", Icon = "@drawable/icon")]
     public class MainActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
