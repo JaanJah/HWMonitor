@@ -14,15 +14,13 @@ using Microsoft.AppCenter.Distribute;
 
 namespace HWMonitor
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/MyTheme", Icon = "@drawable/icon")]
+    [Activity(Label = "@string/app_name", Theme = "@style/MyTheme")]
     public class MainActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            AppCenter.Start("f7ae5016-aa19-4264-8a45-7817bcf7d0e6", typeof(Analytics), typeof(Crashes), typeof(Distribute));
-            Distribute.SetEnabledAsync(true);
             SetContentView(Resource.Layout.activity_main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
