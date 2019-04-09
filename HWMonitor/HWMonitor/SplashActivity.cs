@@ -12,6 +12,10 @@ using System.Threading.Tasks;
 [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, Icon = "@drawable/icon")]
 public class SplashActivity : AppCompatActivity
 {
+    //TODO: Drawable for all screen densities
+    //TODO: Enable crash reports
+    //TODO: Add options in settings. (Fahrenheit and Celsius converting)
+    //TODO: Add temperature.
     static readonly string TAG = "X:" + typeof(SplashActivity).Name;
 
     public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
