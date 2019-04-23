@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HWMonitor</string>
+    <string name="action_settings">Ajustes</string>
+  <string name="displayOrientation">Orientación de la pantalla</string>
+  <string name="displayRotation">Rotación de la pantalla</string>
+  <string name="displayWidth">Ancho de pantalla</string>
+  <string name="displayHeight">Altura de la pantalla</string>
+  <string name="displayDensity">Densidad de pantalla</string>
+  <string name="batteryChargeLevel">Nivel de carga de la batería</string>
+  <string name="batteryState">Estado de la batería</string>
+  <string name="batterySource">Fuente de bateria</string>
+  <string name="deviceModel">Modelo de dispositivo</string>
+  <string name="deviceManufacturer">Fabricante de dispositivos</string>
+  <string name="deviceName">Nombre del dispositivo</string>
+  <string name="deviceVersion">Versión del dispositivo</string>
+  <string name="devicePlatform">Plataforma de dispositivos</string>
+  <string name="deviceIdiom">Idioma del dispositivo</string>
+  <string name="deviceType">Tipo de dispositivo</string>
+</resources>
