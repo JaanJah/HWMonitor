@@ -16,7 +16,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
-			android:text="Display orientation" />
+			android:text="@string/displayOrientation" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -30,7 +30,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Display rotation" />
+			android:text="@string/displayRotation" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -44,7 +44,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Display width" />
+			android:text="@string/displayWidth" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -58,7 +58,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Display height" />
+			android:text="@string/displayHeight" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -72,7 +72,7 @@
 			android:layout_height="wrap_content"
 			android:layout_marginTop="15dip"
 			android:textColor="#EFEFEF"
-			android:text="Display density" />
+			android:text="@string/displayDensity" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"

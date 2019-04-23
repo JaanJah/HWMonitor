@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">HWMonitor</string>
     <string name="action_settings">Settings</string>
+  <string name="displayOrientation">Display orientation</string>
+  <string name="displayRotation">Display rotation</string>
+  <string name="displayWidth">Display width</string>
+  <string name="displayHeight">Display height</string>
+  <string name="displayDensity">Display density</string>
+  <string name="batteryChargeLevel">Battery charge level</string>
+  <string name="batteryState">Battery state</string>
+  <string name="batterySource">Battery source</string>
+  <string name="deviceModel">Device Model</string>
+  <string name="deviceManufacturer">Device Manufacturer</string>
+  <string name="deviceName">Device Name</string>
+  <string name="deviceVersion">Device Version</string>
+  <string name="devicePlatform">Device Platform</string>
+  <string name="deviceIdiom">Device Idiom</string>
+  <string name="deviceType">Device Type </string>
 </resources>

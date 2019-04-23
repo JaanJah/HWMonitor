@@ -16,7 +16,7 @@
 			android:layout_width="match_parent"
 			android:textColor="#EFEFEF"
 			android:layout_height="wrap_content"
-			android:text="Battery charge level" />
+			android:text="@string/batteryChargeLevel" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -30,7 +30,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Battery state" />
+			android:text="@string/batteryState" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -44,7 +44,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Battery source" />
+			android:text="@string/batterySource" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"

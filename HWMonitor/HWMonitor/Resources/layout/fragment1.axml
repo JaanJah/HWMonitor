@@ -17,7 +17,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
-			android:text="Device model" />
+			android:text="@string/deviceName" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -31,7 +31,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Device Manufacturer" />
+			android:text="@string/deviceManufacturer" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -45,7 +45,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Device Name" />
+			android:text="@string/deviceName" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -59,7 +59,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Device Version" />
+			android:text="@string/deviceVersion" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -73,7 +73,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Device Platform" />
+			android:text="@string/devicePlatform" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -87,7 +87,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Device Idiom" />
+			android:text="@string/deviceIdiom" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
@@ -101,7 +101,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="#EFEFEF"
 			android:layout_marginTop="15dip"
-			android:text="Device Type" />
+			android:text="@string/deviceType" />
 		<TextView
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="match_parent"
