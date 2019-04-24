@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">HWMonitor</string>
     <string name="action_settings">Ajustes</string>
+  <string name="device">Dispositivo</string>
+  <string name="battery">Batería</string>
+  <string name="display">Monitora</string>
   <string name="displayOrientation">Orientación de la pantalla</string>
   <string name="displayRotation">Rotación de la pantalla</string>
   <string name="displayWidth">Ancho de pantalla</string>

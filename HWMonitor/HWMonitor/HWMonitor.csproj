@@ -237,7 +237,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <AndroidResource Include="Resources\values-es\Strings.xml">
+    <AndroidResource Include="Resources\values-es\strings.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>

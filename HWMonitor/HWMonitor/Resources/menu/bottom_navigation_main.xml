@@ -5,20 +5,20 @@
       android:id="@+id/menu_device"
       android:enabled="true"
       android:icon="@drawable/deviceBtn"
-      android:title="Device"
+      android:title="@string/device"
       app:showAsAction="ifRoom" />
 
   <item
       android:id="@+id/menu_battery"
       android:enabled="true"
       android:icon="@drawable/batteryBtn"
-      android:title="Battery"
+      android:title="@string/battery"
       app:showAsAction="ifRoom" />
 
   <item
       android:id="@+id/menu_display"
       android:enabled="true"
       android:icon="@drawable/displayBtn"
-      android:title="Display"
+      android:title="@string/display"
       app:showAsAction="ifRoom" />
 </menu>

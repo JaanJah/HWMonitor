@@ -4368,14 +4368,17 @@ namespace HWMonitor
 			// aapt resource value: 0x7f0b004e
 			public const int appcenter_distribute_update_failed_dialog_title = 2131427406;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int batteryChargeLevel = 2131427414;
+			// aapt resource value: 0x7f0b0052
+			public const int battery = 2131427410;
 			
-			// aapt resource value: 0x7f0b0058
-			public const int batterySource = 2131427416;
+			// aapt resource value: 0x7f0b0059
+			public const int batteryChargeLevel = 2131427417;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int batteryState = 2131427415;
+			// aapt resource value: 0x7f0b005b
+			public const int batterySource = 2131427419;
+			
+			// aapt resource value: 0x7f0b005a
+			public const int batteryState = 2131427418;
 			
 			// aapt resource value: 0x7f0b0034
 			public const int bottom_sheet_behavior = 2131427380;
@@ -4383,41 +4386,47 @@ namespace HWMonitor
 			// aapt resource value: 0x7f0b0035
 			public const int character_counter_pattern = 2131427381;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int deviceIdiom = 2131427422;
+			// aapt resource value: 0x7f0b0051
+			public const int device = 2131427409;
 			
-			// aapt resource value: 0x7f0b005a
-			public const int deviceManufacturer = 2131427418;
-			
-			// aapt resource value: 0x7f0b0059
-			public const int deviceModel = 2131427417;
-			
-			// aapt resource value: 0x7f0b005b
-			public const int deviceName = 2131427419;
+			// aapt resource value: 0x7f0b0061
+			public const int deviceIdiom = 2131427425;
 			
 			// aapt resource value: 0x7f0b005d
-			public const int devicePlatform = 2131427421;
-			
-			// aapt resource value: 0x7f0b005f
-			public const int deviceType = 2131427423;
+			public const int deviceManufacturer = 2131427421;
 			
 			// aapt resource value: 0x7f0b005c
-			public const int deviceVersion = 2131427420;
+			public const int deviceModel = 2131427420;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int displayDensity = 2131427413;
+			// aapt resource value: 0x7f0b005e
+			public const int deviceName = 2131427422;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int displayHeight = 2131427412;
+			// aapt resource value: 0x7f0b0060
+			public const int devicePlatform = 2131427424;
 			
-			// aapt resource value: 0x7f0b0051
-			public const int displayOrientation = 2131427409;
+			// aapt resource value: 0x7f0b0062
+			public const int deviceType = 2131427426;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int displayRotation = 2131427410;
+			// aapt resource value: 0x7f0b005f
+			public const int deviceVersion = 2131427423;
 			
 			// aapt resource value: 0x7f0b0053
-			public const int displayWidth = 2131427411;
+			public const int display = 2131427411;
+			
+			// aapt resource value: 0x7f0b0058
+			public const int displayDensity = 2131427416;
+			
+			// aapt resource value: 0x7f0b0057
+			public const int displayHeight = 2131427415;
+			
+			// aapt resource value: 0x7f0b0054
+			public const int displayOrientation = 2131427412;
+			
+			// aapt resource value: 0x7f0b0055
+			public const int displayRotation = 2131427413;
+			
+			// aapt resource value: 0x7f0b0056
+			public const int displayWidth = 2131427414;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int mr_button_content_description = 2131427328;
